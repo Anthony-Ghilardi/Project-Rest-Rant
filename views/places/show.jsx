@@ -26,7 +26,7 @@ function show(data) {
               <h4 className="text-primary fs-1">Comments</h4>
               <p className="fw-bolder">No comments yet</p>
             </div>
-            <a href={`/places/${data.id}/edit_forms`} className="btn btn-warning">
+            <a href={`/places/${data.id}/edit`} className="btn btn-warning">
               Edit
             </a>
             <form method="POST" action={`/places/${data.id}?_method=DELETE`}>
@@ -42,3 +42,5 @@ function show(data) {
 }
 
 module.exports = show;
+
+// /places/${data.id}/edit
