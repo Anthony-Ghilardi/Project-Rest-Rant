@@ -9,5 +9,5 @@ module.exports = [{
     city: 'Phoenix',
     state: 'AZ',
     cuisines: 'Coffee, Bakery',
-    pic: '/images/coffee-cat.jpg'
+    pic: '/images/pexels-chevanon-302899.jpg'
 }]
