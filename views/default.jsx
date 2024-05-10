@@ -24,6 +24,11 @@ function Def (html) {
                 </nav>
                 {html.children}
             </body>
+            <footer>
+                <div className='sticky-lg-bottom'>
+                    <p className='text-primary fs-1'>Created By Anthony Ghilardi</p>
+                </div>
+            </footer>
         </html>
     )
 }
