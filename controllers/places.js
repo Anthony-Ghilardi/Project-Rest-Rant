@@ -30,7 +30,7 @@ router.get('/new', (req, res) => {
 router.get('/:id', (req, res) => {
     db.Place.findById(req.params.id)
     .then(place => {
-        res.render('places/show', { place })
+        res.render('places/show', { place, id: req.params.id })
     })
     .catch(err => {
         console.log('err', err)
@@ -48,7 +48,14 @@ router.delete('/:id', (req, res) => {
 })
 
 router.get('/:id/edit', (req, res) => {
-  res.send('GET edit form stub')
+  db.Place.findById(req.params.id)
+    .then(place => {
+      res.render('places/edit', { place })
+    })
+    .catch(err => {
+      console.log('err', err)
+      res.render('error404')
+    })
 })
 
 router.post('/:id/rant', (req, res) => {
