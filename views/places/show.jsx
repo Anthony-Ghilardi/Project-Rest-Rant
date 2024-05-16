@@ -18,9 +18,14 @@ function show(data) {
             <div className="col">
               <h3 className="text-primary fs-1">Description</h3>
               <p className="fw-bolder">
-                Located in {data.place.city}, {data.place.state} and serves{" "}
-                {data.place.cuisines} cuisine
+                Located in {data.place.city}, {data.place.state}
               </p>
+              <h3>
+                {data.place.showEstablished()}
+              </h3>
+              <h4>
+                Serving {data.place.cuisines}
+              </h4>
             </div>
             <div className="col">
               <h4 className="text-primary fs-1">Comments</h4>
