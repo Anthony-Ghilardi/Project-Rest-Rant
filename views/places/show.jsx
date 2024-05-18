@@ -54,14 +54,14 @@ function show(data) {
             <form id="comment-form" method="POST" action={`/places/${data.place.id}/comment`}>
               <div className="row">
                 <div className="form-group col-sm-6">
-                  <label htmlFor="author">Author</label>
+                  <label htmlFor="author">Your Name</label>
                   <input 
                   id="author"
                   name="author"
                   className="form-control" />
                 </div>
                 <div className="form-group col-sm-6">
-                  <label htmlFor="content">Content</label>
+                  <label htmlFor="content">Your Comment</label>
                   <textarea
                     id="content"
                     className="form-control" />
@@ -85,8 +85,7 @@ function show(data) {
                 <input 
                 type="checkbox"
                 id="rant"
-                name="rant"
-                className="form-control" />
+                name="rant" />
               </div>
               <input 
               type="submit"
