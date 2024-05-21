@@ -63,10 +63,10 @@ function show(data) {
               <h4 className="text-primary fs-1">Comments</h4>
               {comments}
             </div>
-            <a href={`/places/${data.id}/edit`} className="btn btn-warning">
+            <a href={`/places/${data.place._id}/edit`} className="btn btn-warning">
               Edit
             </a>
-            <form method="POST" action={`/places/${data.place._id}?_method=DELETE`}>
+            <form method="POST" action={`/places/${data.place.id}?_method=DELETE`}>
               <button type="submit" className="btn btn-danger">
                 Delete
               </button>
