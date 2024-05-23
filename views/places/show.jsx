@@ -66,13 +66,13 @@ function show(data) {
             <a href={`/places/${data.place._id}/edit`} className="btn btn-warning">
               Edit
             </a>
-            <form method="POST" action={`/places/${data.place.id}?_method=DELETE`}>
+            <form method="POST" action={`/places/${data.place._id}?_method=DELETE`}>
               <button type="submit" className="btn btn-danger">
                 Delete
               </button>
             </form>
             <h1>Leave a review!</h1>
-            <form id="comment-form" method="POST" action={`/places/${data.place.id}/comment`}>
+            <form id="comment-form" method="POST" action={`/places/${data.place._id}/comment`}>
               <div className="row">
                 <div className="form-group col-sm-6">
                   <label htmlFor="author">Your Name</label>
@@ -85,6 +85,7 @@ function show(data) {
                   <label htmlFor="content">Your Comment</label>
                   <textarea
                     id="content"
+                    name="content"
                     className="form-control" />
                 </div>
               </div>
