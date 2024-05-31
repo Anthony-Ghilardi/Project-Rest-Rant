@@ -34,6 +34,9 @@ function show(data) {
             <strong>- {c.author}</strong>
           </h3>
           <h4>Rating: {c.stars}</h4>
+          <form method="POST" action={`/places/${data.place.id}/comment/${c.id}?_method=DELETE`}>
+            <input type="submit" className="btn btn-danger" value="Delete Comment" />
+          </form>
         </div>
       );
     });
@@ -64,15 +67,15 @@ function show(data) {
               {comments}
             </div>
             <a href={`/places/${data.place._id}/edit`} className="btn btn-warning">
-              Edit
+              Edit this restaurant
             </a>
             <form method="POST" action={`/places/${data.place._id}?_method=DELETE`}>
               <button type="submit" className="btn btn-danger">
-                Delete
+                Delete this restaurant
               </button>
             </form>
             <h1>Leave a review!</h1>
-            <form id="comment-form" method="POST" action={`/places/${data.place._id}/comment`}>
+            <form id="comment-form" method="POST" action={`/places/${data.place._id}/rant`}>
               <div className="row">
                 <div className="form-group col-sm-6">
                   <label htmlFor="author">Your Name</label>
@@ -121,5 +124,3 @@ function show(data) {
 }
 
 module.exports = show;
-
-// /places/${data.id}/edit
