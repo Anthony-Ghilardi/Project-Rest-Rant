@@ -1,6 +1,22 @@
 # Project REST-Rant
 
-REST-Rant is an app where users can review restaurants.
+## Description
+
+REST-Rant is a website designed to allow users to create and review restaurants of their choice.
+
+Features
+- Splash Page: When you first visit the site, you'll be greeted with a splash page containing a navigation bar with several links to explore the website.
+
+- Places Page: Clicking on the "Places" link in the navigation bar will take you to a list of user-added restaurants. From here, you can further interact with the restaurants by clicking on their names.
+
+- Add a Restaurant: The "Add Place" link in the navigation bar allows you to add a new restaurant of your choice. Once added, other users can view and interact with it.
+
+- Restaurant Reviews: Upon clicking on a restaurant's name, you will be directed to the review section of the website. Here, you can see detailed information about the restaurant as well as reviews from other users.
+
+## Deployment
+This site is deployed at [https://rest-rant-code.up.railway.app/]
+
+## Routes
 
 | Method | Path                     | Purpose                                          |
 |--------|--------------------------|--------------------------------------------------|
@@ -39,3 +55,7 @@ Rants
 | rating     | Number                   |
 | comment    | String                   |
 | reviewer   | String                   |
+
+## Future Plans
+- User Authentification
+- Admin features such as deletion and editing tools.
